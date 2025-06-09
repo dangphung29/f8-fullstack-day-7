@@ -30,6 +30,16 @@ input:focus::placeholder {
     color: transparent;
 }
 
+input::placeholder {
+    font-size: 1.5rem;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+input {
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
 .container {
     width: 1170px;
     margin: 0 auto;
@@ -50,6 +60,8 @@ header .container {
     height: 33px;
 }
 
+/* Nav CSS-------------------------- */
+
 .nav {
     padding: 0 15px;
 }
@@ -58,7 +70,15 @@ header .container {
     display: flex;
 }
 
-.nav ul a {
+.nav .main-menu {
+    position: relative;
+}
+
+.nav .main-menu:hover .sub-menu {
+    display: flex;
+}
+
+.nav .main-menu>a {
     display: block;
     text-decoration: none;
     color: #fff;
@@ -69,6 +89,50 @@ header .container {
     letter-spacing: 0.11rem;
     line-height: 2.1rem;
 }
+
+
+.nav .sub-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 47px;
+    left: 0;
+}
+
+
+
+.nav .sub-menu li {
+    height: 46px;
+    min-width: 220px;
+    background-color: #fff;
+}
+
+.nav .sub-menu li:not(li:first-child) {
+    border-top: 1px solid rgba(0, 0, 0, 0.05)
+}
+
+.nav .sub-menu a {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.6rem;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    padding: 0 0 0 25px;
+    line-height: 46px;
+    text-decoration: none;
+}
+
+.nav .sub-menu a:hover {
+    background-color: #b80257;
+    color: #fff;
+}
+
+
+
+
+
+
+/* -------------------------------------------------------- */
 
 .left-wrapper {
     display: flex;
@@ -84,6 +148,56 @@ header .search {
     cursor: pointer;
     color: #fff;
 }
+
+.actions {
+    position: relative;
+}
+
+.actions .search-input {
+    display: none;
+    display: none;
+    align-items: center;
+    padding: 5px;
+    position: absolute;
+    width: 280px;
+    height: 55px;
+    background-color: #fff;
+    top: 32px;
+    right: 20px;
+}
+
+.actions .search-hidden:checked+.search-input {
+    display: flex;
+}
+
+.actions .search-input input {
+    flex: 1;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid #ececec;
+}
+
+.actions input {
+    padding: 10px;
+}
+
+.actions .search-input div {
+    width: 48px;
+    height: 48px;
+    background-color: #b80257;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.actions .search-input div:hover {
+    cursor: pointer;
+}
+
+
 
 .cart {
     font-size: 18px;
@@ -148,10 +262,7 @@ header .search {
     flex: 1;
 }
 
-.side-bar .search input::placeholder {
-    font-size: 1.5rem;
-    font-family: "Source Sans Pro", sans-serif;
-}
+
 
 .side-bar .title {
     font-family: "PT Sans", sans-serif;
@@ -295,6 +406,7 @@ main {
 }
 
 .course-detail .desc {
+    line-height: 2.2rem;
     margin: 20px 0px;
 }
 
