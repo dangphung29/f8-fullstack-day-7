@@ -384,7 +384,6 @@ main {
 }
 
 .courses .flash::before {
-    /* content: url(../img/img-flash.svg); */
     background-image: url(../img/img-flash.svg);
     background-repeat: no-repeat;
     background-position: 54px 71px;
@@ -419,7 +418,7 @@ main {
     transition: all 0.6s ease-in-out;
 }
 
-.courses-item:hover img {
+.courses-item:hover .courses-img img {
     scale: 1.1;
     opacity: 0.8;
 }
